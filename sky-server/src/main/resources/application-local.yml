@@ -1,0 +1,32 @@
+# 本地开发环境配置，包含实际的开发环境值
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://localhost:3306/sky_take_out
+      username: root
+      password: MySql5115.
+
+  redis:
+    host: localhost
+    port: 6379
+    password: 123456
+    database: 10
+
+sky:
+  jwt:
+    admin-secret-key: itcast
+    user-secret-key: itheima
+
+  alioss:
+    endpoint: oss-cn-beijing.aliyuncs.com
+    access-key-id: LTAI5tPeFLzsPPT8gG3LPW64
+    access-key-secret: U6k1brOZ8gaOIXv3nXbulGTUzy6Pd7
+    bucket-name: sky-itcast
+
+  wechat:
+    appid: wx4f987285e2df1319
+    secret: 28d59c08f68925474caa9ed60aa7ec88
+
+#  shop:
+#    address: 上海市浦东新区世纪大道100号
+#    ak: 3p49MVra6urFRGOT9sNMkyGv1jGtnlNq

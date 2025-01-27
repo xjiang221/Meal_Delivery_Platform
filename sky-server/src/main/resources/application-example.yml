@@ -1,0 +1,28 @@
+# 示例配置文件，展示所需的配置结构
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://localhost:3306/database_name
+      username: your_username
+      password: your_password
+
+  redis:
+    host: localhost
+    port: 6379
+    password: your_redis_password
+    database: 10
+
+sky:
+  jwt:
+    admin-secret-key: your_admin_secret_here
+    user-secret-key: your_user_secret_here
+
+  alioss:
+    endpoint: oss-cn-region.aliyuncs.com
+    access-key-id: your_key_id_here
+    access-key-secret: your_secret_here
+    bucket-name: your_bucket_name
+
+  wechat:
+    appid: your_appid_here
+    secret: your_secret_here

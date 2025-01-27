@@ -1,0 +1,52 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: local
+  main:
+    allow-circular-references: true
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://${MYSQL_HOST}:${MYSQL_PORT}/${MYSQL_DATABASE}?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      username: ${MYSQL_USERNAME}
+      password: ${MYSQL_PASSWORD}
+  redis:
+    host: ${REDIS_HOST}
+    port: ${REDIS_PORT}
+    password: ${REDIS_PASSWORD}
+    database: ${REDIS_DATABASE}
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.sky.entity
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    com:
+      sky:
+        mapper: debug
+        service: info
+        controller: info
+
+sky:
+  jwt:
+    admin-secret-key: ${JWT_ADMIN_SECRET}
+    admin-ttl: 7200000
+    admin-token-name: token
+    user-secret-key: ${JWT_USER_SECRET}
+    user-ttl: 7200000
+    user-token-name: authentication
+
+  alioss:
+    endpoint: ${ALIOSS_ENDPOINT}
+    access-key-id: ${ALIOSS_ACCESS_KEY_ID}
+    access-key-secret: ${ALIOSS_ACCESS_KEY_SECRET}
+    bucket-name: ${ALIOSS_BUCKET_NAME}
+
+  wechat:
+    appid: ${WECHAT_APPID}
+    secret: ${WECHAT_SECRET}

@@ -1,0 +1,70 @@
+#**/target/
+#.idea
+#*.iml
+#*.class
+#*Test.java
+#**/test/
+#
+## 添加以下内容
+#application-local.yml
+#*.local.yml
+
+
+# Maven 构建目录和文件
+target/
+!.mvn/wrapper/maven-wrapper.jar
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# IDE 相关文件（对于使用 IntelliJ IDEA 的项目）
+.idea/
+*.iws
+*.iml
+*.ipr
+.settings/
+.project
+.classpath
+
+# 日志文件
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 本地配置文件（包含敏感信息）
+application-local.yml
+application-dev.yml
+*.local.yml
+.env
+
+# 操作系统生成的文件
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# 临时文件
+*.tmp
+*.bak
+*.sw?
+*~
+
+# 测试生成的文件
+**/test/resources/
+surefire-reports/
+
+# 前端构建文件（如果项目包含前端）
+node_modules/
+dist/
+build/
+
+# 配置文件通配
+**/application-*.yml
+!**/application.yml
+!**/application-example.yml
